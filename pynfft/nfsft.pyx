@@ -340,11 +340,11 @@ cdef class NFSFT(object):
 
     def get_f_hat_flat(self):
         """
-	Return a copy of the internal array f_hat in a user-friendly, flat layout.
-	The (l, m) spectral coefficients are stored in this order:
-	(0, 0), (1, -1), (1, 0), (1, 1), (2, -2), (2, -1), ...
-	"""
-	cdef int i, l, m
+        Return a copy of the internal array f_hat in a user-friendly, flat layout.
+        The (l, m) spectral coefficients are stored in this order:
+        (0, 0), (1, -1), (1, 0), (1, 1), (2, -2), (2, -1), ...
+        """
+        cdef int i, l, m
         out = np.zeros((self._N + 1) ** 2, dtype='complex')
         i = 0
         for l in range(0, self._N + 1):
